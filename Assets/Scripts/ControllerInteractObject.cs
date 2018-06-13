@@ -22,13 +22,13 @@ public class ControllerInteractObject : MonoBehaviour {
     void Awake()
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
-        rb = GetComponent<Rigidbody>();
+        rb = player.GetComponent<Rigidbody>();
     }
 
     private void SetCollidingObject(Collider col)
     {
         // 1
-        if (collidingObject || !col.GetComponent<Rigidbody>())
+        if (collidingObject)
         {
             return;
         }
