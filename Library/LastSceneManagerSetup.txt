@@ -2,3 +2,6 @@ sceneSetups:
 - path: Assets/Temptest/Temp.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/TestAvalanche.unity
+  isLoaded: 0
+  isActive: 0
