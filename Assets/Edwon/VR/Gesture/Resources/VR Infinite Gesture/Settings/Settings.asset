@@ -15,16 +15,32 @@ MonoBehaviour:
   vrType: 0
   showVRUI: 1
   gestureButton: 5
-  confidenceThreshold: 0.9800000190734863
+  confidenceThreshold: 0.9440535306930542
   gestureSyncDelay: 500
   minimumGestureAxisLength: 0.1
-  beginInDetectMode: 1
+  beginInDetectMode: 0
   vrGestureDetectType: 0
-  currentNeuralNet: test
-  lastNeuralNet: test
+  currentNeuralNet: Neural Net 3
+  lastNeuralNet: Neural Net 3
   neuralNets:
-  - test
-  gestureBank: []
-  gestureBankPreEdit: []
+  - Neural Net 3
+  gestureBank:
+  - name: Breaststroke
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 240
+  - name: Frontstroke
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 244
+  gestureBankPreEdit:
+  - name: Breaststroke
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 240
+  - name: Frontstroke
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 244
   state: 0
-  stateInitial: 8
+  stateInitial: 0

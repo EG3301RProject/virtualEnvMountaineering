@@ -475,9 +475,11 @@
     <None Include="Assets\Edwon\VR\Gesture\Resources\VR Infinite Gesture\Shaders\Unlit-Color.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
+    <None Include="Assets\StreamingAssets\VR Infinite Gesture\Neural Networks\Neural Net 3\GestureBank.txt" />
     <None Include="Assets\Edwon\VR\Gesture\Integrations\ReadMe.txt" />
     <None Include="Assets\Edwon\VR\Gesture\ReadMe.txt" />
     <None Include="Assets\Edwon\VR\Gesture\Resources\VR Infinite Gesture\Shaders\ReadMe.txt" />
+    <None Include="Assets\StreamingAssets\VR Infinite Gesture\Neural Networks\Neural Net 3\Gestures\Frontstroke.txt" />
     <None Include="Assets\Edwon\VR\Gesture\Resources\VR Infinite Gesture\VRUI\Shaders\LaserPointer.shader" />
     <None Include="Assets\Edwon\VR\Gesture\Tutorials\TutorialsReadMe.txt" />
     <None Include="Assets\VRTK\Scripts\Internal\Shaders\UIOverlay.shader" />
@@ -486,6 +488,8 @@
     <None Include="Assets\VRTK\Scripts\Internal\Shaders\AdaptiveQualityDebugVisualization.shader" />
     <None Include="Assets\Winter Zone Mini 1.0\readme.txt" />
     <None Include="Assets\Edwon\VR\Gesture\Tutorials\Getting Started\Settings\TutorialSettings.txt" />
+    <None Include="Assets\StreamingAssets\VR Infinite Gesture\Neural Networks\Neural Net 3\Neural Net 3.txt" />
+    <None Include="Assets\StreamingAssets\VR Infinite Gesture\Neural Networks\Neural Net 3\Gestures\Breaststroke.txt" />
     <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
     <None Include="Assets\VRTK\Scripts\Internal\Shaders\TransparentFresnelBehind.shader" />

@@ -1,0 +1,16 @@
+{
+    "gestures": [
+        {
+            "name": "Breaststroke",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 240
+        },
+        {
+            "name": "Frontstroke",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 244
+        }
+    ]
+}
