@@ -1,0 +1,40 @@
+{
+    "gestures": [
+        {
+            "name": "Earth",
+            "hand": 1,
+            "isSynchronous": false,
+            "exampleCount": 0
+        },
+        {
+            "name": "Ice",
+            "hand": 1,
+            "isSynchronous": false,
+            "exampleCount": 0
+        },
+        {
+            "name": "Fire",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 0
+        },
+        {
+            "name": "Air",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 0
+        },
+        {
+            "name": "Gravity",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 0
+        },
+        {
+            "name": "Pull",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 0
+        }
+    ]
+}

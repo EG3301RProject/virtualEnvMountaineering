@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AvalancheController : MonoBehaviour {
 
-    public GameObject player;
-
     // Use this for initialization
     void Start () {
 
@@ -21,7 +19,7 @@ public class AvalancheController : MonoBehaviour {
         if (other.name == "Player")
         {
             Rigidbody body = other.GetComponent<Rigidbody>();
-            body.AddForce(other.transform.forward * -50);
+            body.AddForce(other.transform.forward * -200);
         }
     }
 }
