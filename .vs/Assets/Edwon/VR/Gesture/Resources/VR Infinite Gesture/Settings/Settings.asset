@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fc1825353372948a7b78d71a0c6848, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  playerID: 0
+  vrType: 0
+  showVRUI: 0
+  gestureButton: 5
+  confidenceThreshold: 0.8999999761581421
+  gestureSyncDelay: 500
+  minimumGestureAxisLength: 0.1
+  beginInDetectMode: 1
+  vrGestureDetectType: 0
+  currentNeuralNet: Neural Net 4
+  lastNeuralNet: Neural Net 3
+  neuralNets:
+  - Example 1 - Basics
+  - Example 2 - Powers
+  - Neural Net 3
+  - Neural Net 4
+  gestureBank:
+  - name: BSjon
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 365
+  - name: FSjon
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 242
+  gestureBankPreEdit:
+  - name: BSjon
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 365
+  - name: FSjon
+    hand: 1
+    isSynchronous: 1
+    exampleCount: 242
+  state: 0
+  stateInitial: 8

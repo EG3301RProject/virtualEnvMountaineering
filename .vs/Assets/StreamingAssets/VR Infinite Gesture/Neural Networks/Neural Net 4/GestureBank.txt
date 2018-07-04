@@ -1,0 +1,16 @@
+{
+    "gestures": [
+        {
+            "name": "BSjon",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 243
+        },
+        {
+            "name": "FSjon",
+            "hand": 1,
+            "isSynchronous": true,
+            "exampleCount": 121
+        }
+    ]
+}

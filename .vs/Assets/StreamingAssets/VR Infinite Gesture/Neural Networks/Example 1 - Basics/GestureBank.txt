@@ -1,0 +1,28 @@
+{
+    "gestures": [
+        {
+            "name": "Circle",
+            "hand": 1,
+            "isSynchronous": false,
+            "exampleCount": 81
+        },
+        {
+            "name": "Triangle",
+            "hand": 1,
+            "isSynchronous": false,
+            "exampleCount": 102
+        },
+        {
+            "name": "Push",
+            "hand": 1,
+            "isSynchronous": false,
+            "exampleCount": 46
+        },
+        {
+            "name": "Pull",
+            "hand": 1,
+            "isSynchronous": false,
+            "exampleCount": 50
+        }
+    ]
+}
