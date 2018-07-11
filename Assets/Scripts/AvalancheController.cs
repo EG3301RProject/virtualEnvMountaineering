@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class AvalancheController : MonoBehaviour {
 
+    public int thrust;
+
+    private Rigidbody body;
     // Use this for initialization
     void Start () {
-
+        
     }
 	
 	// Update is called once per frame
@@ -18,8 +21,8 @@ public class AvalancheController : MonoBehaviour {
     {
         if (other.name == "Player")
         {
-            Rigidbody body = other.GetComponent<Rigidbody>();
-            body.AddForce(other.transform.forward * -200);
+            body = other.GetComponent<Rigidbody>();
+            body.AddForce(other.transform.forward * -thrust);
         }
     }
 }

@@ -9,9 +9,12 @@ public class OnGesture : MonoBehaviour {
 
     public GameObject breaststroke_text;
     public GameObject freestyle_text;
-   // int counterbs = 0;
-   // int counterfs = 0;
-   // public Text counttext;
+    public GameObject player;
+    public int thrust;
+    // int counterbs = 0;
+    // int counterfs = 0;
+    // public Text counttext;
+    private Rigidbody body;
 
     void OnEnable()
     {
@@ -24,6 +27,16 @@ public class OnGesture : MonoBehaviour {
     {
         GestureRecognizer.GestureDetectedEvent -= OnGestureDetected;
         GestureRecognizer.GestureRejectedEvent -= OnGestureRejected;
+    }
+
+    void Start()
+    {
+        body = player.GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        
     }
 
 
@@ -52,16 +65,18 @@ public class OnGesture : MonoBehaviour {
             case "Breaststroke":
                 {
                     StartCoroutine(ShowAndHide(breaststroke_text,1f));
-                //    counterbs++;
-                //    counttext.text = counterbs.ToString();
+                    //    counterbs++;
+                    //    counttext.text = counterbs.ToString();
+                    body.AddForce(player.transform.forward * 200);
                     break;
                 }
                 break;
             case "Frontstroke":
                 {
                     StartCoroutine(ShowAndHide(freestyle_text, 1f));
-                //   counterfs++;
-               //   counttext.text = counterfs.ToString();
+                    //   counterfs++;
+                    //   counttext.text = counterfs.ToString();
+                    body.AddForce(player.transform.forward * 200);
                     break;
                 }
                 break;
