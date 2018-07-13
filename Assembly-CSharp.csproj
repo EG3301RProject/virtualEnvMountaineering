@@ -110,6 +110,8 @@
     <Compile Include="Assets\Scripts\ControllerInteractObject.cs" />
     <Compile Include="Assets\Scripts\CubeScript2.cs" />
     <Compile Include="Assets\Scripts\CubeScriptRight.cs" />
+    <Compile Include="Assets\Scripts\GravityScript.cs" />
+    <Compile Include="Assets\Scripts\InactiveAvalancheController.cs" />
     <Compile Include="Assets\Scripts\OnContactLeft.cs" />
     <Compile Include="Assets\Scripts\OnContactRight.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviour.cs" />

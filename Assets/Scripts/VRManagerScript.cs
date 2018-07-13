@@ -6,8 +6,11 @@ public class VRManagerScript : MonoBehaviour
 {
     public static bool[] CubeIsHit = new bool[18];
     public static bool BSdetected, HBSdetected;
+    public GameObject player;
+    public int thrust;
     public GameObject breaststroke_text,highbreaststroke_text;
     private int counter = 1000, counter2 = 1000;
+    private Rigidbody body;
     // Use this for initialization
     void Start()
     {
@@ -16,6 +19,7 @@ public class VRManagerScript : MonoBehaviour
         setCubeFalse();
         counter = 0;
         counter2 = 0;
+        body = player.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -27,7 +31,7 @@ public class VRManagerScript : MonoBehaviour
             {
                 if ((counter2 < 100) && (CubeIsHit[7] || CubeIsHit[10] || CubeIsHit[4] || CubeIsHit[1]))
                 {
-                    if ((counter2 < 100) && (CubeIsHit[5] || CubeIsHit[16] || CubeIsHit[2] || CubeIsHit[13]))
+                    if ((counter2 < 100) && (CubeIsHit[5] || CubeIsHit[16] || CubeIsHit[2] || CubeIsHit[13] || CubeIsHit[17] || CubeIsHit[14]))
                     {
                         HBSdetected = true;
                         Debug.Log("High Breastroke detected");
@@ -99,16 +103,15 @@ public class VRManagerScript : MonoBehaviour
             StartCoroutine(ShowAndHide(breaststroke_text, 1f));
             Debug.Log("Breastroke appeared");
             BSdetected = false;
+            body.AddForce(0.3f*thrust, 0.3f*thrust, -0.3f*thrust, ForceMode.Impulse);
         }
         else if (HBSdetected)
         {
             StartCoroutine(ShowAndHide(highbreaststroke_text, 1f));
             Debug.Log("High Breastroke appeared");
             HBSdetected = false;
+            body.AddForce(0.3f*thrust, 0.3f*thrust, -0.3f*thrust, ForceMode.Impulse);
         }
-
-
-
     }
 
     public void setCube(int cubeName)
