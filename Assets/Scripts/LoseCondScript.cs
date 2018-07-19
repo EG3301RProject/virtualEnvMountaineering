@@ -24,7 +24,7 @@ public class LoseCondScript : MonoBehaviour {
     void Start () {
         LoseGame = false;
         canvas = GameObject.Find("Canvas");
-        retryButton.gameObject.SetActive(false);
+        //retryButton.gameObject.SetActive(false);
         playMusic = false;
     }
 	
@@ -50,8 +50,6 @@ public class LoseCondScript : MonoBehaviour {
                 playMusic = true;
                 Invoke("setRetryButton", 4);
             }
-            
-            Debug.Log("Play lose condition");
         }
         
     }
