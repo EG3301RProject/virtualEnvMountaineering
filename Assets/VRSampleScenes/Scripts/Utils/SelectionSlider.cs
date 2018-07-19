@@ -35,10 +35,16 @@ namespace VRStandardAssets.Utils
         private bool m_GazeOver;                                            // Whether the user is currently looking at the bar.
         private float m_Timer;                                              // Used to determine how much of the bar should be filled.
         private Coroutine m_FillBarRoutine;                                 // Reference to the coroutine that controls the bar filling up, used to stop it if required.
-
+        private GameObject avalanche, avalancheInAct;
 
         private const string k_SliderMaterialPropertyName = "_SliderValue"; // The name of the property on the SlidingUV shader that needs to be changed in order for it to fill.
 
+        void Start()
+        {
+            avalanche = GameObject.Find("Active Avalanche");
+            avalancheInAct = GameObject.Find("Inactive Avalanche");
+            OnBarFilled += startAvalanche;
+        }
 
         private void OnEnable ()
         {
@@ -197,6 +203,12 @@ namespace VRStandardAssets.Utils
             // Reset the timer and bar values.
             m_Timer = 0f;
             SetSliderValue(0f);
+        }
+
+        void startAvalanche()
+        {
+            avalanche.SetActive(true);
+            avalancheInAct.SetActive(true);
         }
     }
 }

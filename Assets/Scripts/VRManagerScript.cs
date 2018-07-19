@@ -25,10 +25,10 @@ public class VRManagerScript : MonoBehaviour
         body = player.GetComponent<Rigidbody>();
         loseCondition = GameObject.Find("LoseZone");
         winCondition = GameObject.Find("GravityArea");
-        avalanche = GameObject.Find("Active Avalanche");
+        /*avalanche = GameObject.Find("Active Avalanche");
         avalanche.SetActive(false);
         avalancheInAct = GameObject.Find("Inactive Avalanche");
-        avalancheInAct.SetActive(false);
+        avalancheInAct.SetActive(false);*/
     }
 
     // Update is called once per frame

@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class LoseCondScript : MonoBehaviour {
 
-    public Text gameOverText;
+    /*public Text gameOverText;
     public Button startButton;
     public Button retryButton;
-    public GameObject panel;
+    public GameObject panel;*/
 
     private GameObject canvas;
     private bool LoseGame;
@@ -35,7 +35,6 @@ public class LoseCondScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter Lose Zone");
         if (other.gameObject.name == "PlayerCollider")
         {
             LoseGame = true;
@@ -43,12 +42,12 @@ public class LoseCondScript : MonoBehaviour {
             {
                 avalanche.GetComponent<AudioSource>().Stop();
                 this.GetComponent<AudioSource>().Play(0);
-                gameOverText.text = "GAME OVER";
+                /*gameOverText.text = "GAME OVER";
                 startButton.gameObject.SetActive(false);
                 panel.GetComponent<Image>().color = UnityEngine.Color.black;
                 FadeIn();
+                Invoke("setRetryButton", 4);*/
                 playMusic = true;
-                Invoke("setRetryButton", 4);
             }
         }
         
@@ -64,11 +63,11 @@ public class LoseCondScript : MonoBehaviour {
         StartCoroutine(Dofade());
     }
 
-    void setRetryButton()
+    /*void setRetryButton()
     {
         retryButton.gameObject.SetActive(true);
         retryButton.interactable = true;
-    }
+    }*/
 
     IEnumerator Dofade()
     {
