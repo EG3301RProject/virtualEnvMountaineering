@@ -14,7 +14,7 @@ public class InactiveAvalancheController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (ps.time > 45)
+        if (ps.time > 30)
         {
             if (currSpeed > 0)
             {

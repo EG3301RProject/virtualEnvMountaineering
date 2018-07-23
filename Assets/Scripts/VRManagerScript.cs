@@ -11,6 +11,9 @@ public class VRManagerScript : MonoBehaviour
     public GameObject breaststroke_text,highbreaststroke_text;
     private int counter = 1000, counter2 = 1000;
     private Rigidbody body;
+    private GameObject loseCondition, winCondition, avalanche, avalancheInAct;
+
+
     // Use this for initialization
     void Start()
     {
@@ -20,6 +23,10 @@ public class VRManagerScript : MonoBehaviour
         counter = 0;
         counter2 = 0;
         body = player.GetComponent<Rigidbody>();
+        loseCondition = GameObject.Find("LoseZone");
+        winCondition = GameObject.Find("GravityArea");
+        avalanche = GameObject.Find("Active Avalanche");
+        avalancheInAct = GameObject.Find("Inactive Avalanche");
     }
 
     // Update is called once per frame
@@ -94,23 +101,37 @@ public class VRManagerScript : MonoBehaviour
             counter++;
         }
 
- 
-
-
-
         if (BSdetected)
         {
             StartCoroutine(ShowAndHide(breaststroke_text, 1f));
             Debug.Log("Breastroke appeared");
             BSdetected = false;
-            body.AddForce(0.3f*thrust, 0.3f*thrust, -0.3f*thrust, ForceMode.Impulse);
+            body.AddForce(0.3f*thrust, 0.5f*thrust, -0.3f*thrust, ForceMode.Impulse);
         }
         else if (HBSdetected)
         {
             StartCoroutine(ShowAndHide(highbreaststroke_text, 1f));
             Debug.Log("High Breastroke appeared");
             HBSdetected = false;
-            body.AddForce(0.3f*thrust, 0.3f*thrust, -0.3f*thrust, ForceMode.Impulse);
+            body.AddForce(0.3f*thrust, 0.8f*thrust, -0.3f*thrust, ForceMode.Impulse);
+        }
+
+        if (avalanche != null)
+        {
+            if (avalanche.GetComponent<AvalancheController>().getEndAvalanche())
+            {
+                body.useGravity = false;
+            }
+        }            
+
+        if (winCondition.GetComponent<WinCondScript>().getWinCond())
+        {
+            body.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        }
+
+        if (loseCondition.GetComponent<LoseCondScript>().getLoseCond())
+        {
+            body.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
     }
 
@@ -127,6 +148,12 @@ public class VRManagerScript : MonoBehaviour
         {
             CubeIsHit[i] = false;
         }
+    }
+
+    public void startGame()
+    {
+        avalanche.SetActive(true);
+        avalancheInAct.SetActive(true);
     }
 
     IEnumerator ShowAndHide(GameObject go, float delay)
